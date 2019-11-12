@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from my_app.views import index, home
+from my_app.views import index, home, save_account
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
-    url(r'^index/$', home)
+    url(r'^index/$', home),
+    url(r'^save_account/$', save_account)
 ]

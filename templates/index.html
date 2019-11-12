@@ -8,5 +8,14 @@
 </head>
 <body>
     <p style="color: red;">Hello Django by PyCharm!</p>
+
+    <form action="/save_account/" method="post">
+        {% csrf_token %}
+        用户名：<input type="text" name="username" id="" placeholder="请输入您的用户名"> <br>
+        密码：<input type="password" name="passwd" id="" placeholder="请输入您的密码"> <br>
+        电话号码：<input type="text" name="phone_num" id="" placeholder="请输入您的手机号码"> <br>
+
+        <input type="submit" value="注册">
+    </form>
 </body>
 </html>
