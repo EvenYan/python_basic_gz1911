@@ -25,6 +25,11 @@ def save_account(request):
 
 def contact(requset):
     contact_list = AccountInfo.objects.all()
+    # 修改联系人列表中第二个人的姓名
+    # contat = contact_list[2]
+    # contat.username = "Iris"
+    # contat.save()
+    print(contact_list)
     c = {"contact_list": contact_list}
     return render(requset, 'contact_list.html', context=c)
 
