@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通讯录</title>
+</head>
+<body>
+    <h1>联系人列表页</h1>
+    
+    <ul>
+        {% for contact in contact_list %}
+            <a href="/detail/{{ contact.id }}"><li>{{ contact.username }}</li></a>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

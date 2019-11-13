@@ -16,11 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from my_app.views import index, home, save_account
+from my_app.views import index, home, save_account, contact, detail
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'^index/$', home),
-    url(r'^save_account/$', save_account)
+    url(r'^save_account/$', save_account),
+    url(r'^contact/$', contact),
+    url(r'^detail/(\d+)/$', detail),
 ]
